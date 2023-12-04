@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    button {
+      padding: 15px 25px;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #3498db;
+      color: #fff;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+  <body>
+    <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+    <script type="text/javascript">
+      var Module = {
+        canvas: (function () {
+          return document.getElementById("canvas");
+        })(),
+      };
+    </script>
+    <script src="index.js"></script>
+    <button id="refreshButton">Reiniciar Juego</button>
+    <script>
+      document.getElementById("refreshButton").onclick = function () {
+        location.reload();
+      };
+    </script>
+  </body>
+</html>
